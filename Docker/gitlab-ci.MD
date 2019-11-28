@@ -7,12 +7,12 @@ services:
 variables:
   DOCKER_DRIVER: overlay
   SPRING_PROFILES_ACTIVE: gitlab-ci
-  USER_GITLAB: truyenminhtoan
+  USER_GITLAB: user_name_replace
   APP_NAME: spring-boot-gitlab-ci
   REPO: spring-demo-ci
-  STAGING_SERVER: 13.231.247.69
+  STAGING_SERVER: xxxxx
   STAGING_SERVER_USER: root
-  STAGING_SERVER_PASSWORD: 0978712200
+  STAGING_SERVER_PASSWORD: xxxxxx
 
 stages:
   - build
@@ -29,6 +29,6 @@ build:
 package:
   stage: package
   script:
-    - docker build -t truyenminhtoan/spring-boot-gitlabci-demo:latest .
-    - docker login -u truyenminhtoan -p "123456789aA@" docker.io
-    - docker push truyenminhtoan/spring-boot-gitlabci-demo:latest
+    - docker build -t xxxxx/spring-boot-gitlabci-demo:latest .
+    - docker login -u xxxxx -p "xxxxx" docker.io
+    - docker push xxxxx/spring-boot-gitlabci-demo:latest
